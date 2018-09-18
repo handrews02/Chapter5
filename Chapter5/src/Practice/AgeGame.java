@@ -14,10 +14,9 @@ public class AgeGame {
 		usersAge = input.nextInt();
 		
 		
-		
 		if(usersAge <= 12)
 		{
-			result = "you are a chld go away!";
+		result = "you are a chld go away!";
 		}
 		else if (usersAge >= 13 && usersAge <= 18)
 		{
@@ -33,21 +32,20 @@ public class AgeGame {
 		}
 		else if (usersAge >= 31 && usersAge <= 40)
 		{
-			result = "You need to get off the coach and do something with your life already!";
+		result = "You need to get off the coach and do something with your life already!";
 		}
 		else if (usersAge >= 41 && usersAge <= 60)
 		{
-			result = "Hopefully you accomlished something by now but let's be honest, that's unlikely";
+		result = "Hopefully you accomlished something by now but let's be honest, that's unlikely";
 		}
 		else if (usersAge >= 61 && usersAge > 61)
 		{
-			result = "You should be dead by now!";
+		result = "You should be dead by now!";
 		}
 		displayMessage(result); 
-			
 		}
 	
-	public static void displayMessage(String result) {
+		public static void displayMessage(String result) {
 		System.out.println(result);
 	}
 }
