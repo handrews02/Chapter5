@@ -26,9 +26,9 @@ public class DoorGame {
 			{
 			result = "Batman";
 			}
-			else 
+			else
 			{
-				result = "nothing because thar was not a choice!";
+			result = "nothing because that was not a choice!";
 			}
 			displayMessage(result);
 	}
