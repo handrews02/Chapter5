@@ -7,13 +7,13 @@ public class AgeGame {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		int usersAge;
-		String result;
+		String result = null;
 		Scanner input = new Scanner (System.in);
 		
 		System.out.println("Please enter your age to be insulted ");
 		usersAge = input.nextInt();
 		
-		displayMessage(result) 
+		
 		
 		if(usersAge <= 12)
 		{
@@ -39,21 +39,15 @@ public class AgeGame {
 		{
 			result = "Hopefully you accomlished something by now but let's be honest, that's unlikely";
 		}
-		else if (usersAge >= 61 && usersAge < 61)
+		else if (usersAge >= 61 && usersAge > 61)
 		{
 			result = "You should be dead by now!";
+		}
+		displayMessage(result); 
 			
 		}
-		//0-12
-		//13-18
-		//19-25
-		//26-30
-		//31-40
-		//41-50
-		//51-60
-		//61- death hahhahah
+	
+	public static void displayMessage(String result) {
+		System.out.println(result);
 	}
-public static void displayMessage(String result) {
-	System.out.println(result);
-}
 }
