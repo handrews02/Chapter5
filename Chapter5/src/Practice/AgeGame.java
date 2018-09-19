@@ -16,7 +16,7 @@ public class AgeGame {
 		
 		if(usersAge <= 12)
 		{
-		result = "you are a chld go away!";
+		result = "you are a child go away!";
 		}
 		else if (usersAge >= 13 && usersAge <= 18)
 		{
@@ -38,7 +38,7 @@ public class AgeGame {
 		{
 		result = "Hopefully you accomlished something by now but let's be honest, that's unlikely";
 		}
-		else if (usersAge >= 61 && usersAge > 61)
+		else if (usersAge >= 61)
 		{
 		result = "You should be dead by now!";
 		}
