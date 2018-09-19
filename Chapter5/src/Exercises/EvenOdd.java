@@ -12,7 +12,7 @@ public class EvenOdd {
 		System.out.println("Please pick an integer >> ");
 		x = input.nextInt();
 		
-		if (x == x%2) {
+		if (0 == x%2) {
 			result = "even";
 		}
 		else {
@@ -21,6 +21,6 @@ public class EvenOdd {
 		displayMessage(result);
 	}
 	public static void displayMessage(String result) {
-		System.out.println(result);
+		System.out.println("Your integer was a " + result);
 	}
 }
