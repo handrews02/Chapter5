@@ -23,7 +23,9 @@ public class CondoSales {
 		}
 		else if (userHouse == 3) {
 			result = "A lake view condo which costs $210,000 ";
-			
+		}
+		else {
+			result = "That is not valid";
 		}
 	displayMessage(result);
 	}
