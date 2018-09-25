@@ -7,6 +7,7 @@ public class CondoSales {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		int userHouse;
+		int parkingSpace;
 		
 		String result = null; 
 		
@@ -27,6 +28,19 @@ public class CondoSales {
 		else {
 			result = "That is not valid";
 		}
+		System.out.println("Now, would you like a parking space? 1 for yes, 2 for no ");
+		parkingSpace = input.nextInt();
+		
+		if (parkingSpace == 1) {
+			result = "It will be an aditional $5,000 ";
+		}
+		else {
+			result = "No need to spend the extra money ";
+		}
+		
+		
+		
+		
 	displayMessage(result);
 	}
 	
