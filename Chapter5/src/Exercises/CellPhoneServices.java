@@ -8,27 +8,27 @@ public class CellPhoneServices {
 		// TODO Auto-generated method stub
 		String result = null;
 		Scanner input = new Scanner(System.in);
-		String phonePlan;
+		int txtMessages;
+		double data;
+		int talkMinutes;
 		
-		System.out.println("Welcome to Horizon Phones! We have many plans for you to choose from." +
-		"Please choose a plan >> A, B, C, D, E, F");
-		phonePlan = input.nextLine();
+		System.out.println("Please enter how many minutes you use for talking");
+		txtMessages = input.nextInt();
+		System.out.println("Please enter how many text messages you send");
+		data = input.nextDouble();
+		System.out.println("Please enter how much data you use");
+		talkMinutes = input.nextInt();
 		
+	
 		
-		if (phonePlan.equalsIgnoreCase("A")) {
-			result = "$49 per month for 500 minutes of talk and NO text";}
-		if (phonePlan.equalsIgnoreCase("B")) {
-			result = "$55 per month for 500 minutes of talk and any text";}
-		if (phonePlan.equalsIgnoreCase("C")) {
-			result = "$61 per month for 500 minutes of talk and no data applies and 100 text messages";}
-		if (phonePlan.equalsIgnoreCase("D")) {
-			result = "$70 per month for 500 minutes of talk and no data applies and more than 100 text messages";}
-		if (phonePlan.equalsIgnoreCase("E")) {
-			result = "$79 per month for 2 gigabytes of data";}
-		if (phonePlan.equalsIgnoreCase("F")) {
-			result = "$87 per month for more than 2 gigabytes of data";}
-			
-		System.out.println(result);
+		if(talkMinutes > 500 && data == 0 && txtMessages == 0) {
+			result = "You need plan A which costs $49 per month";}
+		if(talkMinutes > 500 && data == 0) {
+			result = "You need plan B which costs $55 per month";}
+		if(talkMinutes <= 500 && data == 0 && txtMessages == 100){
+			result = "You need plan C which costs $61 per month";}
+		
+
 		
 		
 	}
