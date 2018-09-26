@@ -21,12 +21,21 @@ public class CellPhoneServices {
 		
 	
 		
-		if(talkMinutes > 500 && data == 0 && txtMessages == 0) {
+		if(talkMinutes >= 500 && data == 0 && txtMessages == 0) {
 			result = "You need plan A which costs $49 per month";}
-		if(talkMinutes > 500 && data == 0) {
+		else if(talkMinutes < 500 && data == 0 && txtMessages == 0) {
 			result = "You need plan B which costs $55 per month";}
-		if(talkMinutes <= 500 && data == 0 && txtMessages == 100){
+		else if(talkMinutes < 500 && data == 0 && txtMessages  > 100){
 			result = "You need plan C which costs $61 per month";}
+		else {
+			result = "You need plan D which costs $70 per month";}
+		if(data > 0 && data < 2) {
+			result = "You need plan E which costs $79 per month";}
+		else if(data > 2) {
+			result = "You need plan F which cists $87 per month";}
+		
+		System.out.println(result);
+		
 		
 
 		
