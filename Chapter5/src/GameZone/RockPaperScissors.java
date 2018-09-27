@@ -3,10 +3,12 @@ package GameZone;
 import java.util.Random;
 import java.util.Scanner;
 
+public class RockPaperScissors {
+
 public static void main(String[] args) 
 { 
-    String personPlay; 
-    String computerPlay = "";  
+    String userChoice; 
+    String computerChoice = null;  
     int computerInt;
     String response; 
 
@@ -18,7 +20,6 @@ public static void main(String[] args)
                        "Please enter a move.\n" + "Rock = R, Paper" + 
                        "= P, and Scissors = S.");
 
-    System.out.println();
 
    
     computerInt = generator.nextInt(3)+1; 
@@ -26,43 +27,41 @@ public static void main(String[] args)
   
 
     if (computerInt == 1) 
-       computerPlay = "R"; 
+       computerChoice = "R"; 
     else if (computerInt == 2) 
-       computerPlay = "P"; 
+       computerChoice = "P"; 
     else if (computerInt == 3) 
-       computerPlay = "S"; 
+       computerChoice = "S"; 
 
-
-    //Get player's play from input-- note that this is 
-    // stored as a string 
-    System.out.println("Enter your play: "); 
-    personPlay = scan.next();
-
-
-    personPlay = personPlay.toUpperCase(); 
 
  
-    System.out.println("Computer play is: " + computerPlay); 
+    System.out.println("Enter your play: "); 
+    userChoice = scan.next();
+
+
+    userChoice = userChoice.toUpperCase(); 
+
+ 
+    System.out.println("Computer play is: " + computerChoice); 
 
 
 
-
-    if (personPlay.equals(computerPlay)) 
+    if (userChoice.equals(computerChoice)) 
        System.out.println("It's a tie!"); 
-    else if (personPlay.equals("R")) 
-       if (computerPlay.equals("S")) 
+    else if (userChoice.equals("R")) 
+       if (computerChoice.equals("S")) 
           System.out.println("Rock crushes scissors. You win!!");
-    else if (computerPlay.equals("P")) 
+    else if (computerChoice.equals("P")) 
             System.out.println("Paper eats rock. You lose!!"); 
-    else if (personPlay.equals("P")) 
-       if (computerPlay.equals("S")) 
+    else if (userChoice.equals("P")) 
+       if (computerChoice.equals("S")) 
        System.out.println("Scissor cuts paper. You lose!!"); 
-    else if (computerPlay.equals("R")) 
+    else if (computerChoice.equals("R")) 
             System.out.println("Paper eats rock. You win!!"); 
-    else if (personPlay.equals("S")) 
-         if (computerPlay.equals("P")) 
+    else if (userChoice.equals("S")) 
+         if (computerChoice.equals("P")) 
          System.out.println("Scissor cuts paper. You win!!"); 
-    else if (computerPlay.equals("R")) 
+    else if (computerChoice.equals("R")) 
             System.out.println("Rock breaks scissors. You lose!!"); 
     else 
          System.out.println("Invalid user input."); 
